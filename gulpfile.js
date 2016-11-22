@@ -11,7 +11,7 @@ gulp.task('dev', ['watch', 'serve']);
 
 // serve the build dir
 gulp.task('serve', function () {
-  gulp.src('build')
+  gulp.src('docs')
     .pipe(webserver({
       open: true
     }));
@@ -24,7 +24,7 @@ gulp.task('watch', function () {
   gulp.watch('src/**/*.css', ['css']);
 });
 
-// move dependencies into build dir
+// move dependencies into docs dir
 gulp.task('dependencies', function () {
   return gulp.src([
     'node_modules/traceur/bin/traceur-runtime.js',
@@ -37,7 +37,7 @@ gulp.task('dependencies', function () {
     'node_modules/es6-shim/es6-shim.min.js',
     'node_modules/es6-shim/es6-shim.map'
   ])
-    .pipe(gulp.dest('build/lib'));
+    .pipe(gulp.dest('docs/lib'));
 });
 
 // transpile & move js
@@ -56,17 +56,17 @@ gulp.task('js', function () {
     .pipe(rename({
       extname: '.js'
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 });
 
 // move html
 gulp.task('html', function () {
   return gulp.src('src/**/*.html')
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
 });
 
 // move css
 gulp.task('css', function () {
   return gulp.src('src/**/*.css')
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
 });
