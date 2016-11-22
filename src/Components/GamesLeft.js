@@ -5,7 +5,7 @@ import {Component, View} from 'angular2/core';
 })
 
 @View({
-  templateUrl: 'Templates/GamesLeft.html'
+  templateUrl: 'templates/GamesLeft.html'
 })
 
 export class GamesLeft {
@@ -17,6 +17,7 @@ export class GamesLeft {
   gamesRemaining = totalGamesLeft();
 
 }
+
 
 function totalGamesLeft() {
 	return 30;

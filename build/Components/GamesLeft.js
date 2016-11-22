@@ -21,7 +21,7 @@ System.register("Components/GamesLeft", ["angular2/core"], function($__export) {
       }();
       $__export("GamesLeft", GamesLeft);
       Object.defineProperty(GamesLeft, "annotations", {get: function() {
-          return [new Component({selector: 'gamesleft'}), new View({templateUrl: 'Templates/GamesLeft.html'})];
+          return [new Component({selector: 'gamesleft'}), new View({templateUrl: 'templates/GamesLeft.html'})];
         }});
     }
   };

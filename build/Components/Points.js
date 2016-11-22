@@ -21,7 +21,7 @@ System.register("Components/Points", ["angular2/core"], function($__export) {
       }();
       $__export("Points", Points);
       Object.defineProperty(Points, "annotations", {get: function() {
-          return [new Component({selector: 'points'}), new View({templateUrl: 'Templates/Points.html'})];
+          return [new Component({selector: 'points'}), new View({templateUrl: 'templates/Points.html'})];
         }});
     }
   };

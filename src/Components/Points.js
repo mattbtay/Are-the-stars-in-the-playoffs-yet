@@ -5,7 +5,7 @@ import {Component, View} from 'angular2/core';
 })
 
 @View({
-  templateUrl: 'Templates/Points.html'
+  templateUrl: 'templates/Points.html'
 })
 
 export class Points {
